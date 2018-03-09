@@ -1,0 +1,11 @@
+{
+  "name": "mongodb-query-builder",
+  "version": "0.1.0",
+  "description": "A mongodb query builder",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "iSayme <isaymeorg@gmail.com>",
+  "license": "MIT"
+}

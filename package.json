@@ -2,10 +2,29 @@
   "name": "mongodb-query-builder",
   "version": "0.1.0",
   "description": "A mongodb query builder",
-  "main": "index.js",
+  "main": "lib/mongodb-query-builder.js",
   "scripts": {
-    "test": "mocha"
+    "test": "nyc mocha",
+    "pretest": "npm run lint",
+    "lint": "standard",
+    "prettier": "prettier-standard 'lib/**/*.js' 'test/**/*.js'",
+    "coveralls": "nyc report --reporter=text-lcov | coveralls"
   },
   "author": "iSayme <isaymeorg@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "engines": {
+    "node": ">=6"
+  },
+  "devDependencies": {
+    "coveralls": "^3.0.0",
+    "mocha": "^5.0.4",
+    "nyc": "^11.4.1",
+    "prettier-standard": "^8.0.0",
+    "standard": "^11.0.0"
+  },
+  "standard": {
+    "env": [
+      "mocha"
+    ]
+  }
 }

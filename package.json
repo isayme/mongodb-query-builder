@@ -1,5 +1,5 @@
 {
-  "name": "mongodb-query-builder",
+  "name": "@isayme/mongodb-query-builder",
   "version": "0.1.0",
   "description": "A mongodb query builder",
   "main": "lib/mongodb-query-builder.js",

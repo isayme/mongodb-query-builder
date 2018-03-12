@@ -2,7 +2,7 @@
   "name": "@isayme/mongodb-query-builder",
   "version": "0.1.1",
   "description": "A mongodb query builder",
-  "main": "lib/mongodb-query-builder.js",
+  "main": "lib/query-builder.js",
   "scripts": {
     "test": "nyc mocha",
     "pretest": "npm run lint",

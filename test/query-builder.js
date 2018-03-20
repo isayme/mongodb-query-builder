@@ -27,6 +27,36 @@ describe('Mongodb Query Builder', () => {
       })
     })
 
+    it('should handle null', function () {
+      const builder = new QueryBuilder()
+
+      builder.match({ key: null })
+      builder.match({ key: 'value2' })
+
+      assert.deepEqual(builder.get(), {
+        $and: [{
+          key: null
+        }, {
+          key: 'value2'
+        }]
+      })
+    })
+
+    it('should handle undefined', function () {
+      const builder = new QueryBuilder()
+
+      builder.match({ key: undefined })
+      builder.match({ key: 'value2' })
+
+      assert.deepEqual(builder.get(), {
+        $and: [{
+          key: undefined
+        }, {
+          key: 'value2'
+        }]
+      })
+    })
+
     it('should concat if $and exist', () => {
       const builder = new QueryBuilder()
 
